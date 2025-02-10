@@ -56,7 +56,7 @@ def edit_data(lines):
     
     # Ankiフォーマット用に前半と後半に分ける
     front_text = sentence_2[0]  # 単語
-    back_text = "\n".join(sentence_2[1:])  # 意味と例文
+    back_text = "<br>".join(sentence_2[1:])  # 意味と例文
 
     return front_text, back_text
 
@@ -67,7 +67,7 @@ def send_to_anki(front, back):
     
     note = {
         "deckName": "ALL_DECK::Basic Knowledge::English",
-        "modelName": "Basic",
+        "modelName": "English",
         "fields": {
             "Front": front,
             "Back": back
